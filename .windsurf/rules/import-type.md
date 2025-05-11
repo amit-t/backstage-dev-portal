@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 Use import type whenever you are importing a type.
 
 Prefer top-level `import type` over inline `import { type ... }`.

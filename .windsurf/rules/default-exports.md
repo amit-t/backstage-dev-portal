@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 Unless explicitly required by the framework, do not use default exports.
 
 ```ts

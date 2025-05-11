@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 Do not introduce new enums into the codebase. Retain existing enums.
 
 If you require enum-like behaviour, use an `as const` object:

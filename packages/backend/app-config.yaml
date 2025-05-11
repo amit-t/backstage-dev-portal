@@ -1,0 +1,51 @@
+app:
+  title: Developer Portal
+  baseUrl: http://localhost:3000
+
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+  database:
+    client: better-sqlite3
+    connection: ':memory:'
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+
+auth:
+  environment: development
+  providers: {}
+
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, API, Resource, Location, Template, Group, User]
+  locations:
+    - type: file
+      target: ../../../examples/entities.yaml
+    - type: file
+      target: ../../../examples/template/template.yaml
+    - type: file
+      target: ../../../examples/org.yaml
+
+scaffolder:
+  defaultAuthor:
+    name: Backstage Developer Portal
+    email: dev@portal.com
+  defaultCommitMessage: Create from Developer Portal
+
+techdocs:
+  builder: 'local'
+  publisher:
+    type: 'local'
+  generator:
+    runIn: 'docker'
+
+proxy:
+  '/test':
+    target: 'https://example.com'
+    changeOrigin: true
