@@ -1,0 +1,48 @@
+site_name: Backstage Developer Portal
+site_description: Documentation for the Backstage Developer Portal
+site_url: https://example.github.io/backstage-dev-portal/
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  logo: assets/backstage-logo.txt
+  # favicon: assets/favicon.ico
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Configuration: configuration.md
+  - Features:
+    - Plugins: plugins.md
+  
+repo_url: https://github.com/your-org/backstage-dev-portal
+repo_name: backstage-dev-portal
+edit_uri: edit/main/docs/

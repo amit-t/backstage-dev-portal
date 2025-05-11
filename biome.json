@@ -23,12 +23,14 @@
       "complexity": {
         "noBannedTypes": "off"
       }
-    }
+    },
+    "ignore": [".venv/**/*", "**/site/**/*", "**/*.md", "**/*.yml", "**/*.yaml"]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "ignore": [".venv/**/*", "**/site/**/*", "**/*.md", "**/*.yml", "**/*.yaml"]
   },
   "javascript": {
     "formatter": {
